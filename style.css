@@ -1,4 +1,10 @@
-/* Estilos para el contenedor principal */
+/* Variables */
+:root {
+    --primary-color: orange;
+    --secondary-color: #ff9933;
+}
+
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     font-size: 16px;
@@ -9,26 +15,60 @@ body {
     color: #333;
 }
 
+/* Estilos para el menú */
+/* Estilos para el menú */
+/* Estilos para el menú */
+/* Estilos para el menú */
 .menu {
-    background-color: orange;
+  display: flex;
+    background-color: var(--primary-color);
     padding: 10px;
     text-align: center;
     position: fixed;
     width: 100%;
-    top: 0;
+    bottom: 0; /* Mostrar el menú en la parte inferior */
     z-index: 1000;
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave hacia arriba */
+    white-space: nowrap; /* Evitar el salto de línea */
+    overflow-x: hidden; /* Ocultar cualquier contenido que se desborde horizontalmente */
 }
 
 .menu a {
+    display: inline-block; /* Mostrar elementos en línea */
     color: white;
+    background-color: #ffc04d; /* Color de fondo similar al menú */
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 5px;
+    padding: 10px 20px; /* Mayor área de clic */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+    white-space: nowrap; /* Evitar el salto de línea */
+    text-align: center;
+    flex: 1;
+}
+
+.menu a i {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.menu a.mobile {
+    margin-right: 30px; /* Agregar margen derecho solo al botón de pago en dispositivos móviles */
+}
+
+.menu a:last-child {
+    display: none; /* Ocultar el último enlace del menú en dispositivos móviles */
+}
+
+.menu a:last-child.mobile {
+    display: inline-block; /* Mostrar el último enlace del menú solo en dispositivos móviles */
 }
 
 .menu a:hover {
-    background-color: #ff9933;
+    background-color: var(--secondary-color); /* Cambio de color al pasar el ratón */
 }
 
+/* Estilos para el contenido */
 .content {
     max-width: 1200px;
     margin: 0 auto;
@@ -45,15 +85,8 @@ body {
     height: auto;
 }
 
-h1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: orange;
-    text-align: center;
-}
-
 h1, h2, h3 {
-    color: orange;
+    color: var(--primary-color);
     text-align: center;
 }
 
@@ -61,8 +94,9 @@ p {
     text-align: justify;
 }
 
+/* Estilos para botones y enlaces */
 button, a {
-    background-color: orange;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -73,9 +107,10 @@ button, a {
 }
 
 button:hover, a:hover {
-    background-color: #ff9933;
+    background-color: var(--secondary-color);
 }
 
+/* Estilos para secciones */
 .menu-section, .horario-section, .contacto-section, .pago-section {
     background-color: white;
     border-radius: 10px;
@@ -88,36 +123,28 @@ button:hover, a:hover {
     margin-bottom: 20px;
 }
 
-/* Estilos para el botón de menú en dispositivos móviles */
-.menu-toggle {
-    display: none; /* Ocultar el botón de menú por defecto */
-}
-
+/* Media query para dispositivos móviles */
 @media (max-width: 768px) {
     .content {
         padding-top: 150px;
         opacity: 0.7; /* Aplicar opacidad al contenido para dispositivos móviles */
     }
-
-    .menu {
-        padding: 10px 20px; /* Aumentar el padding para mayor área de clic en el botón */
+    .menu a.desktop {
+        display: none; /* Ocultar enlace "Métodos de Pago" en dispositivos móviles */
     }
-
-    .menu a {
-        display: none; /* Ocultar los enlaces del menú en dispositivos móviles */
+    
+    .menu a.mobile {
+        display: inline-block; /* Mostrar enlace "Pago" en dispositivos móviles */
     }
+}
 
-    /* Mostrar el botón de menú en dispositivos móviles */
-    .menu-toggle {
-        display: block;
-        background-color: transparent;
-        border: none;
-        color: white;
-        font-size: 24px;
-        cursor: pointer;
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        z-index: 1001; /* Asegurar que esté sobre el contenido */
+/* Para dispositivos de escritorio */
+@media (min-width: 769px) {
+    .menu a.desktop {
+        display: inline-block; /* Mostrar enlace "Métodos de Pago" en dispositivos de escritorio */
+    }
+    
+    .menu a.mobile {
+        display: none; /* Ocultar enlace "Pago" en dispositivos de escritorio */
     }
 }
