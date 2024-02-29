@@ -1,69 +1,110 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Affordable and professional web design">
-	  <meta name="keywords" content="web design, affordable web design, professional web design">
-  	<meta name="author" content="Brad Traversy">
-    <title>Acme Web Deisgn | Welcome</title>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gordis Chicken</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.png">
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <div id="branding">
-          <h1><span class="highlight">Acme</span> Web Design</h1>
-        </div>
-        <nav>
-          <ul>
-            <li class="current"><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+</head>
+<body>
 
-    <section id="showcase">
-      <div class="container">
-        <h1>Affordable Professional Web Design</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu luctus ipsum, rhoncus semper magna. Nulla nec magna sit amet sem interdum condimentum.</p>
-      </div>
-    </section>
-
-    <section id="newsletter">
-      <div class="container">
-        <h1>Subscribe To Our Newsletter</h1>
-        <form>
-          <input type="email" placeholder="Enter Email..." required>
-          <button type="submit" class="button_1">Subscribe</button>
-        </form>
-      </div>
-    </section>
-
-    <section id="boxes">
-      <div class="container">
-        <div class="box">
-          <img src="logo_html.png">
-          <h3>HTML5 Markup</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+    <div class="menu">
+        <a href="#menu">Menú</a>
+        <a href="#horario">Horario</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#pago">Métodos de Pago</a>
+    </div>
+    <div class="content">
+        <div class="logo">
+            <img src="url_del_logo" alt="Logo de Gordis Chicken">
         </div>
-        <div class="box">
-          <img src="logo_css.png">
-          <h3>CSS3 Styling</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
-        </div>
-        <div class="box">
-          <img src="logo_brush.png">
-          <h3>Graphic Design</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
-        </div>
-      </div>
-    </section>
+        <h1>Gordis Chicken</h1>
+        <p>¡El pollo que te hará volver por más!</p>
 
-    <footer>
-      <p>Acme Web Deisgn, Copyright &copy; 2019</p>
-    </footer>
-  </body>
+        <div class="menu-section">
+            <h2 id="menu">Menú</h2>
+            
+            <div class="menu-item">
+                <h3>Pollo Asado</h3>
+                <p>Pollo Asado - Descripción del producto - Precio</p>
+                <button>Más información</button>
+
+                <div id="asado" style="display:none;">
+                    <p>Combo Asado: Pollo Asado + Bebida + Acompañamiento - Precio</p>
+                    <!-- Agrega aquí más combos de pollo asado si los tienes -->
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <h3>Pollo Broaster</h3>
+                <p>Pollo Broaster - Descripción del producto - Precio</p>
+                <button>Más información</button>
+
+                <div id="broaster" style="display:none;">
+                    <p>Combo Broaster: Pollo Broaster + Bebida + Acompañamiento - Precio</p>
+                    <!-- Agrega aquí más combos de pollo broaster si los tienes -->
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <h3>Tequeños</h3>
+                <p>Tequeños - Descripción del producto - Precio</p>
+                <button>Más información</button>
+
+                <div id="tequeños" style="display:none;">
+                    <p>Combo Tequeños: Tequeños (x cantidad) + Salsa - Precio</p>
+                    <!-- Agrega aquí más combos de tequeños si los tienes -->
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <h3>Empanadas</h3>
+                <p>Empanadas - Descripción del producto - Precio</p>
+                <button>Más información</button>
+
+                <div id="empanadas" style="display:none;">
+                    <p>Combo Empanadas: Empanadas (x cantidad) + Bebida - Precio</p>
+                    <!-- Agrega aquí más combos de empanadas si los tienes -->
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <h3>Pastelitos</h3>
+                <p>Pastelitos - Descripción del producto - Precio</p>
+                <button>Más información</button>
+
+                <div id="pastelitos" style="display:none;">
+                    <p>Combo Pastelitos: Pastelitos (x cantidad) + Café o Té - Precio</p>
+                    <!-- Agrega aquí más combos de pastelitos si los tienes -->
+                </div>
+            </div>
+
+            <!-- Repite el mismo patrón para las otras categorías del menú -->
+        </div>
+
+        <div class="horario-section">
+            <h2 id="horario">Horario de Disponibilidad</h2>
+            <p>Lunes a Domingo: HH:MM - HH:MM</p>
+        </div>
+
+        <div class="contacto-section">
+            <h2 id="contacto">Información de Contacto</h2>
+            <p>Dirección: [Dirección]</p>
+            <p>Whatsapp: [Número de Whatsapp]</p>
+            <p>Delivery Disponible: Sí</p>
+            <p>Correo Electrónico: [Dejar en blanco por ahora]</p>
+
+            <p>¡Contáctanos para disfrutar del mejor pollo y aperitivos de la ciudad!</p>
+
+            <p>¡Gracias por visitar Gordis Chicken!</p>
+        </div>
+
+        <div class="pago-section">
+            <h2 id="pago">Métodos de Pago</h2>
+            <p>Aceptamos pagos con tarjeta de crédito, débito y efectivo.</p>
+            <!-- Agrega aquí información adicional sobre métodos de pago si es necesario -->
+        </div>
+    </div>
+  <script src="script.js"></script>
+</body>
 </html>
